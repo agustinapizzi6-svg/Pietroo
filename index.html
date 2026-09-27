@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Pietro ♡</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fff7fb;
+    color: #4b2638;
+    overflow-x: hidden;
+}
+
+/* DECORACIÓN */
+
+.heart {
+    position: fixed;
+    color: #f29ab7;
+    opacity: .45;
+    pointer-events: none;
+    animation: float 7s infinite ease-in-out;
+    z-index: 1;
+}
+
+.heart:nth-child(1) {
+    left: 8%;
+    top: 15%;
+    font-size: 22px;
+}
+
+.heart:nth-child(2) {
+    left: 85%;
+    top: 25%;
+    font-size: 30px;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(3) {
+    left: 15%;
+    top: 70%;
+    font-size: 17px;
+    animation-delay: 4s;
+}
+
+.heart:nth-child(4) {
+    left: 75%;
+    top: 75%;
+    font-size: 25px;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(10deg);
+    }
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background:
+        radial-gradient(circle at top left, #ffd9e7, transparent 35%),
+        radial-gradient(circle at bottom right, #f7c7d9, transparent 35%),
+        #fff7fb;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 850px;
+    animation: appear 1.5s ease;
+    z-index: 2;
+}
+
+.small-title {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #a75b77;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 11vw, 115px);
+    color: #8d3e60;
+    line-height: .9;
+    margin-bottom: 25px;
+}
+
+.hero h2 {
+    font-size: clamp(22px, 4vw, 35px);
+    font-weight: normal;
+    color: #6c4050;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: auto;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 30px;
+    border-radius: 40px;
+    background: #a84e72;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+    box-shadow: 0 8px 20px rgba(168,78,114,.2);
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    background: #8f3d5e;
+}
+
+/* SECCIONES */
+
+section {
+    padding: 100px 8%;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(35px, 6vw, 55px);
+    color: #8d3e60;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* PARA MI PERSONA FAVORITA */
+
+.favorite {
+    background: #fff;
+}
+
+.favorite-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 55px;
+    background: #fff5f8;
+    border: 1px solid #f2cad8;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(120,50,80,.08);
+}
+
+.favorite-box p {
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+/* TIMELINE */
+
+.timeline {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: #e7a4ba;
+}
+
+.timeline-item {
+    width: 50%;
+    padding: 25px;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-card {
+    background: white;
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 0 10px 35px rgba(100,50,70,.08);
+}
+
+.timeline-card h3 {
+    color: #9a4667;
+    margin-bottom: 10px;
+}
+
+.timeline-card p {
+    line-height: 1.7;
+}
+
+/* APRENDIENDO */
+
+.learning {
+    background: #fff0f5;
+}
+
+.learning-box {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.learning-box p {
+    font-size: 20px;
+    line-height: 1.9;
+    margin-bottom: 45px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.tag {
+    background: white;
+    border-radius: 50px;
+    padding: 14px 22px;
+    box-shadow: 0 7px 20px rgba(100,50,70,.08);
+}
+
+/* UNIVERSO */
+
+.universe {
+    background: #fff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 22px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: #fff7fa;
+    border: 1px solid #f0c8d6;
+    border-radius: 25px;
+    padding: 35px 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: .35s;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    box-shadow: 0 15px 30px rgba(100,50,70,.12);
+}
+
+.card .emoji {
+    font-size: 45px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #8d3e60;
+    margin-bottom: 10px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+/* COSAS QUE AMO */
+
+.love {
+    background: #fff0f5;
+}
+
+.love-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.love-card {
+    min-height: 180px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.love-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    transition: transform .7s;
+    transform-style: preserve-3d;
+}
+
+.love-card.open .love-inner {
+    transform: rotateY(180deg);
+}
+
+.love-front,
+.love-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+}
+
+.love-front {
+    background: white;
+    border: 1px solid #efc3d2;
+    color: #8d3e60;
+    font-size: 20px;
+}
+
+.love-back {
+    background: #a84e72;
+    color: white;
+    transform: rotateY(180deg);
+    line-height: 1.7;
+}
+
+/* DECISIONES */
+
+.decisions {
+    background: #fff;
+    text-align: center;
+}
+
+.choice-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 800px;
+    margin: 35px auto;
+}
+
+.choice {
+    padding: 15px 25px;
+    border: 1px solid #dfa0b8;
+    background: #fff7fa;
+    border-radius: 30px;
+    color: #783d56;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.choice:hover {
+    background: #f4d1de;
+    transform: scale(1.05);
+}
+
+.choice-result {
+    max-width: 650px;
+    min-height: 80px;
+    margin: 30px auto;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #8d3e60;
+}
+
+/* CARTA */
+
+.letter {
+    background: #fff0f5;
+}
+
+.letter-paper {
+    max-width: 850px;
+    margin: auto;
+    background: #fffdf8;
+    padding: clamp(30px, 7vw, 70px);
+    border-radius: 5px;
+    box-shadow: 0 20px 50px rgba(70,40,40,.12);
+    position: relative;
+}
+
+.letter-paper::before {
+    content: "♡";
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 35px;
+    color: #d98ba7;
+}
+
+.letter-paper p {
+    font-size: 19px;
+    line-height: 2;
+    margin-bottom: 22px;
+}
+
+.signature {
+    text-align: right;
+    font-size: 25px;
+    color: #8d3e60;
+    margin-top: 35px;
+}
+
+/* FELIZ DÍA */
+
+.special {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at 20% 20%, #ffd3e2, transparent 30%),
+        radial-gradient(circle at 80% 80%, #f3c0d2, transparent 30%),
+        #fff4f8;
+}
+
+.special-content {
+    max-width: 900px;
+}
+
+.special h2 {
+    font-size: clamp(45px, 9vw, 85px);
+    color: #8d3e60;
+    margin-bottom: 15px;
+}
+
+.special h3 {
+    font-size: clamp(25px, 5vw, 45px);
+    color: #a84e72;
+    margin-bottom: 30px;
+}
+
+.special p {
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+/* FINAL */
+
+.final {
+    background: #8d3e60;
+    color: white;
+    text-align: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final h2 {
+    font-size: clamp(40px, 8vw, 75px);
+    margin-bottom: 25px;
+}
+
+.final p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.final .button {
+    background: white;
+    color: #8d3e60;
+}
+
+/* ANIMACIÓN */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 75px 6%;
+    }
+
+    .favorite-box {
+        padding: 30px 22px;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd) {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding-left: 35px;
+    }
+
+    .timeline-item {
+        margin-bottom: 15px;
+    }
+
+    .hero p,
+    .favorite-box p,
+    .learning-box p {
+        font-size: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- CORAZONES DECORATIVOS -->
+
+<div class="heart">♡</div>
+<div class="heart">♡</div>
+<div class="heart">♡</div>
+<div class="heart">♡</div>
+
+<!-- PORTADA -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            Para mi persona favorita
+        </div>
+
+        <h1>Agustina ♡ Pietro</h1>
+
+        <h2>Una pequeña parte de todo lo que somos.</h2>
+
+        <p>
+            Porque hay historias que merecen ser guardadas,
+            recuerdos que no quiero olvidar y una persona
+            que hace que hasta no hacer nada sea mi plan favorito.
+        </p>
+
+        <a href="#favorito" class="button">
+            ♡ Entrar a nuestra historia
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- PERSONA FAVORITA -->
+
+<section class="favorite" id="favorito">
+
+    <h2 class="section-title">
+        Para mi persona favorita
+    </h2>
+
+    <p class="section-subtitle">
+        Casi 10 meses después, seguimos aprendiendo a conocernos,
+        a acompañarnos y a crecer uno con el otro.
+    </p>
+
+    <div class="favorite-box">
+
+        <p>
+            Sos mi novio, pero también sos mi mejor amigo.
+            Sos la persona con la que puedo salir, caminar,
+            ir al cine, jugar Harry Potter LEGO o simplemente
+            no hacer absolutamente nada y aun así sentir que
+            estoy exactamente donde quiero estar.
+        </p>
+
+        <br>
+
+        <p>
+            Y creo que una de las cosas más lindas de nosotros
+            es sentir que estamos aprendiendo a vivir con el otro,
+            con nuestras cosas buenas, nuestras diferencias,
+            nuestros chistes y todas esas pequeñas cosas que
+            hacen que seamos nosotros.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- HISTORIA -->
+
+<section>
+
+    <h2 class="section-title">
+        Nuestra historia ♡
+    </h2>
+
+    <p class="section-subtitle">
+        Algunos de los momentos que nos trajeron hasta acá.
+    </p>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <h3>Cuando éramos mejores amigos</h3>
+                <p>
+                    Antes de ser nosotros, ya existía esa confianza,
+                    esas conversaciones y esa forma de acompañarnos.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <h3>El viaje y las conversaciones</h3>
+                <p>
+                    Ese momento en el que empezamos a estar cada vez
+                    más cerca y hablar casi todos los días.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <h3>Nuestra primera cita</h3>
+                <p>
+                    Cine, Zootopia 2 y el comienzo de una etapa
+                    que ninguno de los dos iba a olvidar.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <h3>Ese momento en el hotel</h3>
+                <p>
+                    Una zona verde, unas hamacas y una pregunta
+                    que cambió nuestra historia para siempre.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <h3>10 meses</h3>
+                <p>
+                    Y ahora estamos acá. Creciendo, aprendiendo,
+                    riéndonos y construyendo nuestra propia historia.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- APRENDIENDO A VIVIR -->
+
+<section class="learning">
+
+    <h2 class="section-title">
+        Aprendiendo a vivir con vos 🏠
+    </h2>
+
+    <div class="learning-box">
+
+        <p>
+            Creo que amar a alguien también es aprender.
+            Aprender sus formas, sus tiempos, sus gustos,
+            sus manías y hasta esas pequeñas cosas que antes
+            no conocías.
+            <br><br>
+            Y me encanta que nosotros estemos haciendo eso:
+            creciendo uno con el otro sin dejar de ser nosotros mismos.
+        </p>
+
+        <div class="tags">
+
+            <div class="tag">🎬 Cine</div>
+            <div class="tag">🚶🏻 Caminatas</div>
+            <div class="tag">🧙🏻 Harry Potter LEGO</div>
+            <div class="tag">🛋️ Hacer nada</div>
+            <div class="tag">😂 Nuestros chistes</div>
+            <div class="tag">📺 Series</div>
+            <div class="tag">💗 Estar juntos</div>
+            <div class="tag">🫂 Sentirme segura</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NUESTRO UNIVERSO -->
+
+<section class="universe">
+
+    <h2 class="section-title">
+        Nuestro pequeño universo 🌎
+    </h2>
+
+    <p class="section-subtitle">
+        Algunas de las cosas que automáticamente me hacen pensar en nosotros.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <span class="emoji">🎬</span>
+            <h3>El cine</h3>
+            <p>
+                Porque cualquier película es mejor si voy con vos.
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🧙🏻</span>
+            <h3>Harry Potter LEGO</h3>
+            <p>
+                Una de mis formas favoritas de pasar tiempo con vos.
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🔎</span>
+            <h3>The Mentalist</h3>
+            <p>
+                La serie que supuestamente vamos a mirar mucho más de lo que realmente la miramos. Jiji.
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🌀</span>
+            <h3>JoJo's</h3>
+            <p>
+                Porque también me gusta entrar un poquito en tu mundo.
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">📺</span>
+            <h3>Dramas gringos</h3>
+            <p>
+                Nuestra capacidad de terminar viendo cualquier drama.
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="emoji">🛋️</span>
+            <h3>No hacer nada</h3>
+            <p>
+                Y probablemente este sea uno de mis planes favoritos.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COSAS QUE AMO -->
+
+<section class="love">
+
+    <h2 class="section-title">
+        Cosas que amo de vos 💗
+    </h2>
+
+    <p class="section-subtitle">
+        Tocá las tarjetas para descubrir qué hay detrás.
+    </p>
+
+    <div class="love-cards">
+
+        <div class="love-card" onclick="this.classList.toggle('open')">
+            <div class="love-inner">
+                <div class="love-front">
+                    Tu forma de cuidarme ♡
+                </div>
+                <div class="love-back">
+                    Me encanta sentir que puedo estar tranquila y segura a tu lado.
+                </div>
+            </div>
+        </div>
+
+        <div class="love-card" onclick="this.classList.toggle('open')">
+            <div class="love-inner">
+                <div class="love-front">
+                    Verme feliz
+                </div>
+                <div class="love-back">
+                    Amo que te guste verme feliz y que hagas cosas para conseguirlo.
+                </div>
+            </div>
+        </div>
+
+        <div class="love-card" onclick="this.classList.toggle('open')">
+            <div class="love-inner">
+                <div class="love-front">
+                    Consentirme
+                </div>
+                <div class="love-back">
+                    Porque sí, me encanta que me consientas. Muchísimo.
+                </div>
+            </div>
+        </div>
+
+        <div class="love-card" onclick="this.classList.toggle('open')">
+            <div class="love-inner">
+                <div class="love-front">
+                    Verme desarreglada
+                </div>
+                <div class="love-back">
+                    Me encanta saber que me querés incluso en mis momentos más simples.
+                </div>
+            </div>
+        </div>
+
+        <div class="love-card" onclick="this.classList.toggle('open')">
+            <div class="love-inner">
+                <div class="love-front">
+                    Ser mi mejor amigo
+                </div>
+                <div class="love-back">
+                    Porque antes que cualquier etiqueta, sos una de las personas con las que más disfruto estar.
+                </div>
+            </div>
+        </div>
+
+        <div class="love-card" onclick="this.classList.toggle('open')">
+            <div class="love-inner">
+                <div class="love-front">
+                    Nuestros chistes 😂
+                </div>
+                <div class="love-back">
+                    Especialmente esos que probablemente no deberíamos explicar delante de nadie.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DECISIONES -->
+
+<section class="decisions">
+
+    <h2 class="section-title">
+        Ahora elegí vos 💌
+    </h2>
+
+    <p class="section-subtitle">
+        Porque esta página también tiene algunas decisiones.
+        Elegí lo que quieras descubrir.
+    </p>
+
+    <div class="choice-buttons">
+
+        <button class="choice" onclick="choose('letter')">
+            💌 Una carta
+        </button>
+
+        <button class="choice" onclick="choose('memory')">
+            📸 Un recuerdo
+        </button>
+
+        <button class="choice" onclick="choose('reason')">
+            💗 Una razón
+        </button>
+
+        <button class="choice" onclick="choose('surprise')">
+            🎁 Una sorpresa
+        </button>
+
+    </div>
+
+    <div class="choice-result" id="choiceResult">
+        Elegí una opción...
+    </div>
+
+</section>
+
+
+<!-- CARTA -->
+
+<section class="letter" id="carta">
+
+    <h2 class="section-title">
+        Una carta para vos 💌
+    </h2>
+
+    <div class="letter-paper">
+
+        <p>
+            Pietro:
+        </p>
+
+        <p>
+            Si llegaste hasta acá probablemente ya te diste cuenta
+            de que hice toda una página para vos. Y sí, me tomé
+            bastante en serio esto de hacerte un regalo.
+        </p>
+
+        <p>
+            Quiero que sepas que amo lo que somos. Amo que podamos
+            ser novios y al mismo tiempo sentir que seguimos siendo
+            mejores amigos. Amo poder salir con vos, caminar,
+            ir al cine, jugar, mirar series o simplemente estar
+            juntos sin hacer absolutamente nada.
+        </p>
+
+        <p>
+            Me encanta cómo estamos creciendo y aprendiendo uno
+            con el otro. No porque seamos perfectos, sino porque
+            estamos aprendiendo a conocernos cada vez más.
+        </p>
+
+        <p>
+            Gracias por cuidarme, consentirme, hacerme reír,
+            querer verme feliz y hacerme sentir segura a tu lado.
+            Gracias por ser vos conmigo.
+        </p>
+
+        <p>
+            Y aunque todavía nos quede muchísimo por vivir,
+            me hace muy feliz pensar en todo lo que ya vivimos
+            y en todas las cosas que todavía nos faltan.
+        </p>
+
+        <div class="signature">
+            Te amo ♡<br>
+            Agus
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FELIZ DÍA DEL NOVIO -->
+
+<section class="special">
+
+    <div class="special-content">
+
+        <div class="small-title">
+            3 de octubre
+        </div>
+
+        <h2>
+            FELIZ DÍA DEL NOVIO 💗
+        </h2>
+
+        <h3>
+            Al mejor novio del mundo.
+        </h3>
+
+        <p>
+            Gracias por ser mi novio, mi mejor amigo,
+            mi compañero de planes y de no hacer nada,
+            mi persona para reírme y mi lugar seguro.
+            <br><br>
+            Te amo muchísimo, Pietro.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+    <div>
+
+        <h2>
+            Y todavía falta nuestra mejor parte... ♡
+        </h2>
+
+        <p>
+            Casi 10 meses de nosotros.
+            <br>
+            Todo lo que vivimos.
+            <br>
+            Todo lo que aprendimos.
+            <br>
+            Y todo lo que todavía nos queda por vivir.
+        </p>
+
+        <a href="#favorito" class="button">
+            Volver al principio ♡
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function choose(option) {
+
+    const result = document.getElementById("choiceResult");
+
+    if (option === "letter") {
+
+        result.innerHTML =
+        "💌 Entonces elegiste una carta... Bajá un poquito más, porque hay una esperándote.";
+
+        document.getElementById("carta").scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }
+
+    if (option === "memory") {
+
+        result.innerHTML =
+        "📸 Nuestro recuerdo favorito todavía está por descubrirse... pero te aseguro que hay demasiados para elegir.";
+
+    }
+
+    if (option === "reason") {
+
+        result.innerHTML =
+        "💗 Razón #1: porque incluso cuando no hacemos nada, estar con vos sigue siendo uno de mis planes favoritos.";
+
+    }
+
+    if (option === "surprise") {
+
+        result.innerHTML =
+        "🎁 La sorpresa todavía está escondida... seguí explorando la página.";
+
+        setTimeout(() => {
+
+            document.querySelector(".special").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }, 1000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
